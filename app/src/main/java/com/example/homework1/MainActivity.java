@@ -23,19 +23,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         TextView textView = (TextView) findViewById(R.id.textView);
 
-
-
-        String fullname = "";
-
-//        if (fullname.isEmpty()) {
-//
-//            fullname = "Jan Kowalski" ;
-//            textView.setText(fullname);
-//
-//        } else {
-            fullname = getIntent().getStringExtra("FULLNAME");
+        String fullname = getIntent().getStringExtra("FULLNAME");
             textView.setText(fullname);
-//        }
+
     }
 
 

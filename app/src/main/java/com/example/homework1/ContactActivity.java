@@ -11,7 +11,7 @@ import android.widget.RadioButton;
 public class ContactActivity extends AppCompatActivity {
 
     private final int REQUEST_CODE = 1;
-
+    String name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,24 +28,10 @@ public class ContactActivity extends AppCompatActivity {
 
     public void onClickOk (View v) {
         Intent intent = new Intent (this, MainActivity.class);
-        String fullname = "Jan Kowalski";
-        intent.putExtra("FULLNAME",fullname);
+        intent.putExtra("FULLNAME",name);
         startActivity(intent);
 
     }
-
-
-    public String getNames(int i) {
-        String[] names = new String[5];
-        names[0] = "Jan Kowalski";
-        names[1] = "Anna Nowak";
-        names[2] = "Johny Depp";
-        names[3] = "Robert Pattinson";
-        names[4] = "Rafał Brzozowski";
-
-        return names[i];
-    }
-
 
 
     public void onRadioButtonClick(View view)
@@ -56,19 +42,23 @@ public class ContactActivity extends AppCompatActivity {
         switch(view.getId())
         {
             case R.id.radioButton:
-
+                name = "Jan Kowalski";
                 break;
 
             case R.id.radioButton2:
+                name = "Anna Nowak";
                 break;
 
             case R.id.radioButton3:
-
+                name = "Johny Depp";
                 break;
+
             case R.id.radioButton4:
+                name = "Robert Pattinson";
                 break;
 
             case R.id.radioButton5:
+                name = "Rafał Brzozowski";
                 break;
 
             default:
