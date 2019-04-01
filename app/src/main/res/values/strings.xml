@@ -3,4 +3,9 @@
     <string name="title_activity_contact">ContactActivity</string>
     <string name="title_activity_sound">SoundActivity</string>
     <string name="fullname">Jan Kowalski</string>
+    <array name="drawables">
+        <item>@drawable/pobrane</item>
+        <item>@drawable/pobrane2</item>
+        <item>@drawable/pobrane3</item>
+    </array>
 </resources>
