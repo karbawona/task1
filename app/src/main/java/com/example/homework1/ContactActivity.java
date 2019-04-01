@@ -10,6 +10,7 @@ import android.widget.RadioButton;
 
 public class ContactActivity extends AppCompatActivity {
 
+    private final int REQUEST_CODE = 1;
 
 
     @Override
@@ -26,10 +27,10 @@ public class ContactActivity extends AppCompatActivity {
     }
 
     public void onClickOk (View v) {
-        Intent i = new Intent (this, MainActivity.class);
-        String name = "aaa";
-        i.putExtra(name, "aaa");
-        startActivity(i);
+        Intent intent = new Intent (this, MainActivity.class);
+        String fullname = "Jan Kowalski";
+        intent.putExtra("FULLNAME",fullname);
+        startActivity(intent);
 
     }
 

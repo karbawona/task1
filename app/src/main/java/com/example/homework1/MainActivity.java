@@ -21,18 +21,30 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-       // String zmienna1 = getIntent().getStringExtra("aaa");
-        TextView txt = (TextView)findViewById(R.id.textView);
+        TextView textView = (TextView) findViewById(R.id.textView);
 
 
+
+        String fullname = "";
+
+//        if (fullname.isEmpty()) {
+//
+//            fullname = "Jan Kowalski" ;
+//            textView.setText(fullname);
+//
+//        } else {
+            fullname = getIntent().getStringExtra("FULLNAME");
+            textView.setText(fullname);
+//        }
     }
 
 
 
     public void onClickChangeContact (View view) {
 
-        Intent i = new Intent (this, ContactActivity.class);
-        startActivity(i);
+        Intent intent = new Intent (this, ContactActivity.class);
+        startActivity(intent);
+
 
     }
 
@@ -42,6 +54,8 @@ public void onClickChangeSound  (View view) {
     Intent i = new Intent (this, SoundActivity.class);
     startActivity(i);
     }
+
+
 
 
 
