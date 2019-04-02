@@ -14,14 +14,11 @@ public class SoundActivity extends AppCompatActivity {
     }
 
     public void onClickCancel(View v) {
-        Intent i = new Intent(this, MainActivity.class);
-        startActivity(i);
-
+        finish();
     }
 
     public void onClickOk(View v) {
-        Intent i = new Intent(this, MainActivity.class);
-        startActivity(i);
+        finish();
 
     }
 

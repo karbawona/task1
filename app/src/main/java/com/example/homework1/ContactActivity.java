@@ -25,8 +25,7 @@ public class ContactActivity extends AppCompatActivity {
     }
 
     public void onClickCancel (View v) {
-        Intent i = new Intent (this, MainActivity.class);
-        startActivity(i);
+        finish();
 
     }
 
@@ -42,7 +41,7 @@ public class ContactActivity extends AppCompatActivity {
     public void onRadioButtonClick(View view)
     {
 
-        boolean checked =((RadioButton)view).isChecked();
+      //  boolean checked =((RadioButton)view).isChecked();
 
         switch(view.getId())
         {
