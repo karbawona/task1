@@ -29,18 +29,15 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String FULLNAME = "FULLNAME";
     public String fullname = "Rafał Brzozowski";
-    public String soundFromIntent;
+    public String soundFromIntent = "";
     private MediaPlayer buttonPlayer;
     static public Uri[] sounds;
     public final int REQSound = 0;
     public final int REQ = 1;
- //   private int crnSnd = 0;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -71,8 +68,12 @@ public class MainActivity extends AppCompatActivity {
             buttonPlayer.reset();
 
             try {
+                    if (soundFromIntent != "") {
+                        buttonPlayer.setDataSource(getApplicationContext(), sounds[Integer.parseInt(soundFromIntent)]);
 
-                buttonPlayer.setDataSource(getApplicationContext(), sounds[Integer.parseInt(soundFromIntent)]);
+                    } else {
+                        buttonPlayer.setDataSource(getApplicationContext(), sounds[0]);
+                    }
             } catch (IOException e) {
                 e.printStackTrace();
             }
