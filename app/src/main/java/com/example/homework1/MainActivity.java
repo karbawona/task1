@@ -40,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
 
         Drawable drawab ;
 
-
             switch (number) {
                 case 0:
                     drawab = ResourcesCompat.getDrawable(getResources(), R.drawable.pobrane, null);
@@ -57,9 +56,7 @@ public class MainActivity extends AppCompatActivity {
                     break;
 
             }
-
-
-
+            
     }
 
 
