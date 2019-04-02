@@ -1,21 +1,16 @@
 package com.example.homework1;
 
 import android.content.Intent;
-import android.content.res.TypedArray;
-import android.graphics.drawable.Drawable;
-import android.support.v4.content.res.ResourcesCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.RadioButton;
 
-import java.util.Random;
+import static com.example.homework1.MainActivity.FULLNAME;
 
 
 public class ContactActivity extends AppCompatActivity {
 
-    private final int REQUEST_CODE = 1;
-    String name;
+    String name = "Rafał Brzozowski";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,10 +25,10 @@ public class ContactActivity extends AppCompatActivity {
     }
 
     public void onClickOk (View v) {
-        Intent intent = new Intent (this, MainActivity.class);
-        intent.putExtra("FULLNAME",name);
-        intent.putExtra("NUMBERAVATAR", randomNameOfAvatar());
-        startActivity(intent);
+        Intent intent = new Intent ();
+        intent.putExtra(FULLNAME,name);
+        setResult(RESULT_OK, intent);
+        finish();
 
     }
 
@@ -43,7 +38,8 @@ public class ContactActivity extends AppCompatActivity {
 
       //  boolean checked =((RadioButton)view).isChecked();
 
-        switch(view.getId())
+        int id = view.getId();
+        switch(id)
         {
             case R.id.radioButton:
                 name = "Jan Kowalski";
@@ -73,18 +69,5 @@ public class ContactActivity extends AppCompatActivity {
     }
 
 
-private String randomNameOfAvatar(){
-
-        String[] temp = new String[3];
-
-        temp[0] = "pobrane1";
-        temp[1] = "pobrane2";
-        temp[2] = "pobrane3";
-
-        Random rand = new Random();
-        int number = rand.nextInt(3);
-
-        return temp[number];
-    }
 
 }

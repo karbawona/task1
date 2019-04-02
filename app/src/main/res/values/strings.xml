@@ -3,9 +3,18 @@
     <string name="title_activity_contact">ContactActivity</string>
     <string name="title_activity_sound">SoundActivity</string>
     <string name="fullname">Jan Kowalski</string>
+    <string name="back_message">error</string>
     <array name="drawables">
         <item>@drawable/pobrane</item>
         <item>@drawable/pobrane2</item>
         <item>@drawable/pobrane3</item>
     </array>
+    <string-array name="sounds" >
+        <item>mario</item>
+        <item>ring01</item>
+        <item>ring02</item>
+        <item>rind03</item>
+        <item>ring04</item>
+        <item>ringd</item>
+    </string-array>
 </resources>
